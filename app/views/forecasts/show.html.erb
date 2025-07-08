@@ -1,0 +1,23 @@
+<h1>Weather Forecast - Current</h1>
+
+<p>
+  <% if @from_cache %>
+    <strong>Note:</strong> This result was served from cache.
+  <% end %>
+</p>
+
+<% if @forecast %>
+	<div>
+		<strong>Address:</strong> <%= @geo[:address] %>
+	</div>
+  <ul>
+    <li><strong>Temperature:</strong> <%= @forecast[:temperature] %>°C</li>
+    <li><strong>High:</strong> <%= @forecast[:high] %>°C</li>
+    <li><strong>Low:</strong> <%= @forecast[:low] %>°C</li>
+    <li><strong>Conditions:</strong> <%= @forecast[:description] %></li>
+  </ul>
+<% else %>
+  <p>Sorry, no forecast available.</p>
+<% end %>
+
+<p><%= link_to "Search another location", new_forecast_path %></p>

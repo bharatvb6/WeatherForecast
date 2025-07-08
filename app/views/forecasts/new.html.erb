@@ -1,0 +1,15 @@
+<h1>Weather Forecast</h1>
+
+<% if flash[:alert] %>
+  <p style="color:red;"><%= flash[:alert] %></p>
+<% end %>
+
+<%= form_with url: forecasts_path, method: :post, local: true do |form| %>
+  <div>
+    <%= form.label :address, "Enter Address:" %><br>
+    <%= form.text_field :address, placeholder: "e.g. 1600 Amphitheatre Parkway, Mountain View, CA", required: true %>
+  </div><br>
+  <div>
+    <%= form.submit "Get Forecast" %>
+  </div>
+<% end %>
