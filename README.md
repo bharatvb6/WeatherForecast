@@ -23,8 +23,8 @@ A Ruby on Rails application that allows users to retrieve current weather data b
 1️⃣ **Clone the repository**:
 
 ```bash
-git clone https://github.com/yourusername/weather_forecast_app.git
-cd weather_forecast_app
+git clone https://github.com/bharatvb6/WeatherForecast
+cd WeatherForecast
 ````
 
 2️⃣ **Install dependencies**:
